@@ -1,10 +1,8 @@
-import { useEffect } from "react";
 import {
   StyleSheet,
   Text,
   View,
   FlatList,
-  SafeAreaView,
   ActivityIndicator,
 } from "react-native";
 
@@ -17,7 +15,7 @@ import { useQuery } from "urql";
 export default function Page() {
   const [result] = useQuery({
     query: getQuestions,
-    variables: { sort: "activity" },
+    variables: { sort: "votes" },
   });
 
   if (result.fetching) {

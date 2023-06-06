@@ -1,5 +1,6 @@
 const { gql } = require("urql");
 
+// to get All questions
 export const getQuestions = gql`
   query GetQuestions($sort:QuestionSort! ) {
     questions(sort: $sort) {
@@ -22,6 +23,8 @@ export const getQuestions = gql`
   }
 `;
 
+
+// to get question by Id
 export const getQuestionQuery = gql`
   query GetQuestion($id: Int!) {
     question(questionId: $id) {

@@ -26,7 +26,7 @@ const QuestionDetailsPage = () => {
     return <ActivityIndicator />;
   }
   if (result.error) {
-    return <Text>Error: {result.error.message}</Text>;
+    return <Text>Error: {result.error.message},id:{id}</Text>;
   }
 
   const question = result.data.question.items[0];
