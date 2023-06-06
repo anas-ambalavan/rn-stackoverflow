@@ -7,6 +7,6 @@
     "name": "StackOverflow",
     "slug": "StackOverflow",
     "icon":"./assets/images/logo.png",
-    "description":"Stack-overflow clone using react native, expo-router, StepZen, GraphQL"
+    "description":"Stack overflow clone using react native and Stack overflow API"
   }
 }

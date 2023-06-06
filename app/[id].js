@@ -12,6 +12,7 @@ import { useQuery } from "urql";
 import QuestionHeader from "../src/components/QuestionHeader";
 import AnswerListItem from "../src/components/AnswerListItem";
 import { getQuestionQuery } from "../src/graphql/queries";
+import Centered from "../src/components/Centered";
 
 const QuestionDetailsPage = () => {
   const { id } = useSearchParams();
@@ -23,10 +24,18 @@ const QuestionDetailsPage = () => {
 
 
   if (result.fetching) {
-    return <ActivityIndicator />;
+    return (
+      <Centered>
+        <ActivityIndicator />
+      </Centered>
+    );
   }
   if (result.error) {
-    return <Text>Error: {result.error.message},id:{id}</Text>;
+    return (
+      <Centered>
+        <Text>Error: {result.error.message}</Text>
+      </Centered>
+    );
   }
 
   const question = result.data.question.items[0];

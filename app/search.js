@@ -33,9 +33,16 @@ const search = () => {
     navigation.setOptions({
       headerSearchBarOptions: {
         onChangeText: (event) => setSearchTerm(event.nativeEvent.text),
-        onBlur: search,
+        // onBlur: search,
       },
     });
+    let timer;
+    if (searchTerm) {
+      timer = setTimeout(() => {
+        search();
+      }, 500);
+    }
+    return () => clearTimeout(timer);
   }, [navigation, searchTerm, setSearchTerm]);
 
   if (result.fetching) {
@@ -52,6 +59,7 @@ const search = () => {
       </Centered>
     );
   }
+
   if (!result.data?.search) {
     return (
       <Centered>
