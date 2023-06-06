@@ -7,6 +7,11 @@
     "name": "StackOverflow",
     "slug": "StackOverflow",
     "icon":"./assets/images/logo.png",
-    "description":"Stack overflow clone using react native and Stack overflow API"
+    "description":"Stack overflow clone using react native and Stack overflow API",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    }
   }
 }
