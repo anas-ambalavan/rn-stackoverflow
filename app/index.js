@@ -1,25 +1,36 @@
-import { StyleSheet, Text, View, FlatList } from "react-native";
-import questions from "../data/questions.json";
-import QuestionListItem from "../src/components/QuestionListItem";
 import { useEffect } from "react";
-import * as Font from "expo-font";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  SafeAreaView,
+  ActivityIndicator,
+} from "react-native";
 
-const loadFonts=async()=>{
-  await Font.loadAsync({
-    Courier: require("../fonts/Courier.ttf"),
-  })
-}
+import QuestionListItem from "../src/components/QuestionListItem";
+import { getQuestions } from "../src/graphql/queries";
+import { useQuery } from "urql";
+
+
 
 export default function Page() {
+  const [result] = useQuery({
+    query: getQuestions,
+    variables: { sort: "activity" },
+  });
 
-  useEffect(()=>{
-    loadFonts();
-  },[])
-   
+  if (result.fetching) {
+    return <ActivityIndicator />;
+  }
+  if (result.error) {
+    return <Text>Error: {result.error.message}</Text>;
+  }
+
   return (
     <View style={styles.container}>
       <FlatList
-        data={questions.items}
+        data={result.data.questions.items}
         renderItem={({ item }) => <QuestionListItem question={item} />}
       />
     </View>
