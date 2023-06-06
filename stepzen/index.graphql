@@ -1,0 +1,3 @@
+schema @sdl(files: ["stackoverflow.graphql"]) {
+  query: Query
+}
