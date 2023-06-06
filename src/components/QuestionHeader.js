@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import { decode } from "html-entities";
+import Markdown from "react-native-markdown-display";
 
 const QuestionHeader = ({ question }) => {
   return (
@@ -14,7 +15,7 @@ const QuestionHeader = ({ question }) => {
         {question.answer_count} answers • {question.view_count} views
       </Text>
       <View style={styles.separator} />
-      <Text style={styles.body}>{decode(question.body_markdown)}</Text>
+      <Markdown>{decode(question.body_markdown)}</Markdown>
       <View style={styles.tags}>
         {question.tags.map((tag) => (
           <Text key={tag} style={styles.tag}>
