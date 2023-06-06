@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Image } from "react-native";
 import { Link, Stack } from "expo-router";
 import { Provider } from "urql";
 import * as Font from "expo-font";
@@ -8,7 +9,7 @@ import client from "../src/graphql/client";
 
 const loadFonts = async () => {
   await Font.loadAsync({
-    Courier: require("../fonts/Courier.ttf"),
+    Courier: require("../assets/fonts/Courier.ttf"),
   });
 };
 
@@ -24,6 +25,12 @@ const RootLayout = () => {
           name="index"
           options={{
             title: "StackOverFlow",
+            headerLeft: () => (
+              <Image
+                source={require("../assets/images/logo.png")}
+                style={{ width: 25, height: 25 }}
+              />
+            ),
             headerRight: () => (
               <Link href="/search">
                 <AntDesign name="search1" size={20} color="dimgray" />

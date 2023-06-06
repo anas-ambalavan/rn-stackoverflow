@@ -25,6 +25,7 @@ const search = () => {
   const navigation = useNavigation();
 
   const search = () => {
+    if (!searchTerm) return;
     fetch();
   };
 
