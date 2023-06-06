@@ -5,6 +5,8 @@
       "bundler": "metro"
     },
     "name": "StackOverflow",
-    "slug": "StackOverflow"
+    "slug": "StackOverflow",
+    "icon":"./assets/images/logo.png",
+    "description":"Stack-overflow clone using react native, expo-router, StepZen, GraphQL"
   }
 }

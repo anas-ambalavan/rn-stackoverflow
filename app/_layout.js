@@ -24,7 +24,7 @@ const RootLayout = () => {
         <Stack.Screen
           name="index"
           options={{
-            title: "StackOverFlow",
+            title: "StackOverflow",
             headerLeft: () => (
               <Image
                 source={require("../assets/images/logo.png")}
