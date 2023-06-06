@@ -5,10 +5,11 @@ import {
   FlatList,
   ActivityIndicator,
 } from "react-native";
+import { useQuery } from "urql";
 
 import QuestionListItem from "../src/components/QuestionListItem";
 import { getQuestions } from "../src/graphql/queries";
-import { useQuery } from "urql";
+import Centered from "../src/components/Centered";
 
 
 
@@ -19,10 +20,18 @@ export default function Page() {
   });
 
   if (result.fetching) {
-    return <ActivityIndicator />;
+    return (
+      <Centered>
+        <ActivityIndicator />
+      </Centered>
+    );
   }
   if (result.error) {
-    return <Text>Error: {result.error.message}</Text>;
+    return (
+      <Centered>
+        <Text>Error: {result.error.message}</Text>
+      </Centered>
+    );
   }
 
   return (

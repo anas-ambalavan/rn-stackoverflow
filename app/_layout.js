@@ -1,8 +1,10 @@
-import { Stack } from "expo-router";
-import client from "../src/graphql/client";
+import { useEffect } from "react";
+import { Link, Stack } from "expo-router";
 import { Provider } from "urql";
 import * as Font from "expo-font";
-import { useEffect } from "react";
+import { AntDesign } from "@expo/vector-icons";
+
+import client from "../src/graphql/client";
 
 const loadFonts = async () => {
   await Font.loadAsync({
@@ -10,8 +12,7 @@ const loadFonts = async () => {
   });
 };
 
-const _layout = () => {
-  
+const RootLayout = () => {
   useEffect(() => {
     loadFonts();
   }, []);
@@ -19,10 +20,21 @@ const _layout = () => {
   return (
     <Provider value={client}>
       <Stack>
-        <Stack.Screen name="index" options={{ title: "StackOverFlow" }} />
+        <Stack.Screen
+          name="index"
+          options={{
+            title: "StackOverFlow",
+            headerRight: () => (
+              <Link href="/search">
+                <AntDesign name="search1" size={20} color="dimgray" />
+              </Link>
+            ),
+          }}
+        />
+        <Stack.Screen name="[id]" options={{ title: "Question" }} />
       </Stack>
     </Provider>
   );
 };
 
-export default _layout;
+export default RootLayout;

@@ -2,7 +2,7 @@ const { gql } = require("urql");
 
 // to get All questions
 export const getQuestions = gql`
-  query GetQuestions($sort:QuestionSort! ) {
+  query GetQuestions($sort: QuestionSort!) {
     questions(sort: $sort) {
       has_more
       quota_max
@@ -22,7 +22,6 @@ export const getQuestions = gql`
     }
   }
 `;
-
 
 // to get question by Id
 export const getQuestionQuery = gql`
@@ -50,6 +49,24 @@ export const getQuestionQuery = gql`
           is_accepted
           question_id
         }
+      }
+    }
+  }
+`;
+
+// to search 
+export const searchQuery = gql`
+  query SearchQuestion($term: String!) {
+    search(term: $term) {
+      items {
+        answer_count
+        body_markdown
+        creation_date
+        question_id
+        score
+        tags
+        title
+        view_count
       }
     }
   }
