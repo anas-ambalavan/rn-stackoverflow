@@ -1,10 +1,11 @@
 import { View, Text, StyleSheet } from "react-native";
 import { Entypo } from "@expo/vector-icons";
+import { decode } from "html-entities";
 
 const QuestionHeader = ({ question }) => {
   return (
-    <>
-      <Text style={styles.title}>{question.title}</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>{decode(question.title)}</Text>
       <Text style={styles.stats}>
         {question.score} votes •{" "}
         {question.is_answered && (
@@ -13,7 +14,7 @@ const QuestionHeader = ({ question }) => {
         {question.answer_count} answers • {question.view_count} views
       </Text>
       <View style={styles.separator} />
-      <Text style={styles.body}>{question.body_markdown}</Text>
+      <Text style={styles.body}>{decode(question.body_markdown)}</Text>
       <View style={styles.tags}>
         {question.tags.map((tag) => (
           <Text key={tag} style={styles.tag}>
@@ -28,11 +29,16 @@ const QuestionHeader = ({ question }) => {
       <Text style={{ fontSize: 16, marginVertical: 15 }}>
         {question.answer_count} Answers
       </Text>
-    </>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {
+    padding: 10,
+    borderBottomWidth: 0.5,
+    borderColor: "lightgray",
+  },
   stats: {
     fontSize: 12,
   },
