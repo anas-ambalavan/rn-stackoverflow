@@ -6,6 +6,9 @@
 ## App Demo
 - [Click this link to watch the demo](https://drive.google.com/file/d/1WFcwAmwO4i0OfOBsmgYuEYE4ItQsTPVo/view?usp=sharing)
 
+## Run on Expo Client App
+https://expo.dev/@anas.ambalavan/StackOverflow
+
 ## Expo Router Example
 
 Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
