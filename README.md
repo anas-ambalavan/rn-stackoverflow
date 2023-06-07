@@ -1,7 +1,10 @@
 ## App Screenshots
-<img src="https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/8779690b-37c5-4ab8-a200-824d635b6611" width="300"  />
-<img src="https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/3ceeba8a-7394-4ee0-8a18-67851ce5f2b3" width="300"  />
-<img src="https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/54736c33-6c24-4962-b323-1c3e61b10b64" width="300"  />
+<img src="https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/2ddf06fc-f373-46b5-9513-2ea7c3e5557d" width="250"  />
+<img src="https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/91c82688-48a8-4946-8a13-99b16ff0aeae" width="250"  />
+<img src="https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/418b7901-4bbf-4f48-b7aa-2e620d2a628b" width="250"  />
+<!-- ![DetailsScreen](https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/91c82688-48a8-4946-8a13-99b16ff0aeae)
+![HomeScreen](https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/2ddf06fc-f373-46b5-9513-2ea7c3e5557d)
+![SearchScreen](https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/418b7901-4bbf-4f48-b7aa-2e620d2a628b) -->
 
 ## App Demo
 - [Click this link to watch the demo](https://drive.google.com/file/d/1WFcwAmwO4i0OfOBsmgYuEYE4ItQsTPVo/view?usp=sharing)
