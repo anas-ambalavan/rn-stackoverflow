@@ -4,7 +4,7 @@
 <img src="https://github.com/anas-ambalavan/rn-stackoverflow/assets/37231440/418b7901-4bbf-4f48-b7aa-2e620d2a628b" width="250"  />
 
 ## App Demo
-- [Click this link to watch the demo](https://res.cloudinary.com/ddfefbg1v/video/upload/v1695188004/App%20Demo/StackOverflowAppDemo_sqknyw.mov)
+- [Click this link to watch the demo](https://res.cloudinary.com/ddfefbg1v/video/upload/v1695188004/App%20Demo/StackOverflowAppDemo_sqknyw.mp4)
 
 ## Run on Expo Client App
 https://expo.dev/@anas.ambalavan/StackOverflow
